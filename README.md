@@ -1,3 +1,5 @@
+[poop-dodge.html](https://github.com/user-attachments/files/34630948/poop-dodge.html)
+<!DOCTYPE html>
 <html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>똥피하기 게임</title>
@@ -91,7 +93,7 @@ function spawn(){
  if(t>10&&Math.random()<0.28)items.push({k:'p',x:40+Math.random()*(W-80),y:-40,r:26,v:sp*0.8,i:imgs[Math.floor(Math.random()*3)],a:0,ph:Math.random()*6});
  else items.push({k:'d',x:20+Math.random()*(W-40),y:-30,r:15,v:sp*(0.85+Math.random()*0.5),a:0})}
 function loop(n){if(!run)return;const dt=Math.min((n-last)/1000,0.05);last=n;t+=dt;score+=dt*10;
- sp=140+250*(1-Math.exp(-t/50));            // 점점 빨라지지만 한계가 있음
+ sp=220+350*(1-Math.exp(-t/50));            // 점점 빨라지지만 한계가 있음
  if(keys.ArrowLeft||keys.a)tx-=330*dt;if(keys.ArrowRight||keys.d)tx+=330*dt;
  tx=Math.max(24,Math.min(W-24,tx));px+=(tx-px)*Math.min(1,dt*18);
  acc+=dt;const gap=0.34+0.46*Math.exp(-t/45);if(acc>gap){acc=0;spawn()}
